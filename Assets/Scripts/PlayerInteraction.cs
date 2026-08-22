@@ -58,11 +58,9 @@ public class PlayerInteraction : MonoBehaviour
 
     private void FadeTo(float targetAlpha)
     {
-        // Если уже достигли нужной прозрачности – ничего не делаем
         if (Mathf.Approximately(interactionText.alpha, targetAlpha))
             return;
 
-        // Останавливаем предыдущую анимацию
         if (currentFadeCoroutine != null)
         {
             StopCoroutine(currentFadeCoroutine);
